@@ -84,7 +84,7 @@ Puis **Alt + @** (**Alt + Alt Gr + @**):
     $ ping freebox-
     freebox-player.local freebox-server.local
 
-Egalement possible de compléter les usernames **Alt + \~** et les variables **Alt + $**.
+Également possible de compléter les usernames **Alt + \~** et les variables **Alt + $**.
 
 ---
 ## Complétion ... automatique
@@ -96,7 +96,7 @@ Un appui sur **Alt + \*** complète la ligne de commande avec les fichiers propo
     $ cp /Vidéos/IT/clean_coders/CleanCode-E1.mp4 /Vidéos/IT/clean_coders/CleanCode-E2.mp4
     /Vidéos/IT/clean_coders/CleanCode-E3.mp4
 
-Je peux maintenant continuer ma commande par example avec `/backup`.
+Je peux maintenant continuer ma commande par exemple avec `/backup`.
 
 ---
 ## Vérification de la ligne de commande
