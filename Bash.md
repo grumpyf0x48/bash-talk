@@ -46,7 +46,7 @@ Appui sur **Ctrl + Alt + e**:
 
 Puisque `ls` est un alias vers la commande correspondante et `$HOME` est égal à `/home/user`.
 
-A tester avec `rm`: alias ou built-in :question:
+A tester avec `rm`: alias ou built-in ?
 
 ---
 ## Complétion de la ligne de commande
@@ -176,7 +176,7 @@ Avec une commande complexe :angry: comme:
 
 Vous pouvez:
 
-- éditer la commande avec l'éditeur par défaut de Linux avec le raccourci **Ctrl + X + E**
+- éditer la commande avec l'éditeur par défaut de Linux avec le raccourci **Ctrl + x + e**
 - l'enregistrer dans l'historique  - en commentaire - avec **Alt + #**
 
 ---
@@ -225,7 +225,7 @@ Bash est un outil du quotidien très puissant, parfois complexe, pas toujours bi
 Restez curieux !
 
     $ env | grep TALK
-    SLIDES_TALK=
+    SLIDES_TALK=https://framagit.org/grumpyf0x48/bash_talk
     CONTACT_TALK=https://twitter.com/grumpyf0x48
 
 **Merci** !!!
