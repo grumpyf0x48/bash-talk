@@ -7,10 +7,20 @@ theme: gaia
 
 ## Bash
 
-Mieux connaître les possibilités de la ligne de commande
+Mieux connaître les possibilités de la ligne de commande.
 
-Pierre-Yves Fourmond
-[@grumpyf0x48](https://twitter.com/grumpyf0x48)
+Pierre-Yves Fourmond ([@grumpyf0x48](https://twitter.com/grumpyf0x48))
+
+---
+## Historique de Bash
+
+- Bourne Again Shell
+- Successeur open source du **Bourne Shell**
+- Existe depuis 30 ans (1989)
+- Le Shell du Projet GNU
+- Shell par défaut de nombreuses distributions Linux
+- Emprunte des fonctionnalités du **Korn Shell** et du **C Shell**
+- Utilise la librairie **readline** pour l'édition et l'historique des commandes
 
 ---
 ## Raccourcis claviers courants
@@ -22,7 +32,8 @@ Pierre-Yves Fourmond
 - **Ctrl + Shift + c**,  **Ctrl + Shift + v**: copier le texte, coller
 - **Ctrl + s**, **Ctrl + q**: mettre en pause la sortie du terminal, continuer
 - **Ctrl + r**: chercher dans l'historique
-- **Ctrl + l**: effacer l'écran
+
+Ces raccourcis sont définis par la librairie **readline**.
 
 ---
 ## Expansion de la ligne de commande
@@ -167,3 +178,54 @@ Vous pouvez:
 
 - éditer la commande avec l'éditeur par défaut de Linux avec le raccourci **Ctrl + X + E**
 - l'enregistrer dans l'historique  - en commentaire - avec **Alt + #**
+
+---
+## Configuration de readline
+
+Dans le fichier `.inputrc`:
+
+```
+# Never rings the bell.
+set bell-style none
+
+# Performs filename matching and completion in a case-insensitive fashion.
+set completion-ignore-case on
+
+# Displays possible completions using different colors to indicate their file type.
+set colored-stats on
+
+# Default completion mode: Attempt to perform completion on the text before point.
+TAB: complete
+
+# Similar to complete, but replaces the word to be completed with a single match from the list of possible completions.
+# Repeated execution of menu-complete steps through the list of possible completions, inserting each match in turn.
+#TAB: menu-complete
+```
+
+---
+## Dernières astuces
+
+### Obtenir des infos sur un alias, une commande ...
+
+    $ command -V command
+    command est une primitive du shell
+
+    $ command -V rm
+    rm est un alias vers « zrm_rm »
+
+### Fermer la session automatiquement
+
+    $ export TMOUT=600
+
+---
+## Conclusion
+
+Bash est un outil du quotidien très puissant, parfois complexe, pas toujours bien documenté :angry: mais il y a toujours des choses à découvrir :smile:.
+
+Restez curieux !
+
+    $ env | grep TALK
+    SLIDES_TALK=
+    CONTACT_TALK=https://twitter.com/grumpyf0x48
+
+**Merci** !!!

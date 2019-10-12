@@ -3,3 +3,6 @@ talk:
 
 slides:
 	grep "^## " Bash.md
+
+slides-count:
+	grep "^## " Bash.md | wc -l
