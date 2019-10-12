@@ -84,7 +84,7 @@ Puis **Alt + @** (**Alt + Alt Gr + @**):
     $ ping freebox-
     freebox-player.local freebox-server.local
 
-Egalement possible de compléter les usernames **Alt + ~** et les variables **Alt + $**.
+Egalement possible de compléter les usernames **Alt + \~** et les variables **Alt + $**.
 
 ---
 ## Complétion ... automatique
