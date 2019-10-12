@@ -170,7 +170,7 @@ Syntaxe un peu pénible **:cry:** quand même.
 ---
 ## Edition de la dernière commande
 
-Une commande complexe :angry::
+Avec une commande complexe :angry: comme:
 
     $ find /usr/include/linux/ -name *.h -exec grep time_t {} \; -print
 
