@@ -16,7 +16,7 @@ Pierre-Yves Fourmond ([@grumpyf0x48](https://twitter.com/grumpyf0x48))
 
 - Bourne Again Shell
 - Successeur open source du **Bourne Shell**
-- Existe depuis 30 ans (1989)
+- Existe depuis 1989
 - Le Shell du Projet GNU
 - Shell par défaut de nombreuses distributions Linux
 - Emprunte des fonctionnalités du **Korn Shell** et du **C Shell**
