@@ -91,7 +91,7 @@ Puis **Alt + @** (**Alt + Alt Gr + @**):
 
     $ cp /Vidéos/IT/clean_coders/CleanCode-E
 
-Un appui sur **Alt + \*** complète la ligne de commande avec les fichiers proposés par **TAB**:
+Un appui sur **Alt + \*** complète la ligne de commande avec les fichiers qu'un appui sur **TAB** aurait affiché:
 
     $ cp /Vidéos/IT/clean_coders/CleanCode-E1.mp4 /Vidéos/IT/clean_coders/CleanCode-E2.mp4
     /Vidéos/IT/clean_coders/CleanCode-E3.mp4
@@ -133,7 +133,7 @@ La dernière commande est maintenant `sudo`.
     $ ls Video1.mp4  Video2.mp4
     Video1.mp4  Video2.mp4
 
-On accède au paramètres de la dernière commande avec **!\***:
+On accède aux paramètres de la dernière commande avec **!\***:
 
     $ rm !*
     rm Video1.mp4 Video2.mp4
