@@ -123,9 +123,7 @@ On relance avec les droits `root`:
     $ sudo !!
     sudo apt-get update
 
-La dernière commande est maintenant `sudo`.
-
-    $ echo !:0
+La dernière commande est maintenant `sudo apt-get update`.
 
 ---
 ## Utilisation des paramètres de la commande
@@ -177,7 +175,7 @@ Avec une commande complexe :angry: comme:
 Vous pouvez:
 
 - éditer la commande avec l'éditeur par défaut de Linux avec le raccourci **Ctrl + x + e**
-- l'enregistrer dans l'historique  - en commentaire - avec **Alt + #**
+- l'enregistrer dans l'historique, en commentaire - avec **Alt + #** (En pratique: **Alt + Alt Gr + #**)
 
 ---
 ## Configuration de readline
@@ -205,7 +203,7 @@ TAB: complete
 ---
 ## Dernières astuces
 
-### Obtenir des infos sur un alias, une commande ...
+### Obtenir des infos sur une commande
 
     $ command -V command
     command est une primitive du shell
