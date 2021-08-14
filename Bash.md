@@ -223,7 +223,7 @@ Bash est un outil du quotidien très puissant, parfois complexe, pas toujours bi
 Restez curieux !
 
     $ env | grep TALK
-    SLIDES_TALK=https://framagit.org/grumpyf0x48/bash_talk
+    SLIDES_TALK=https://github.com/grumpyf0x48/bash-talk
     CONTACT_TALK=https://twitter.com/grumpyf0x48
 
 **Merci** !!!
