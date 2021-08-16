@@ -17,11 +17,10 @@ jobs:
             && liar -l -s $HOME/.local/bin install marp https://github.com/marp-team/marp-cli/releases/download/v1.3.1/marp-cli-v1.3.1-linux.tar.gz
       - name: Build talk slides
         run: |
-          mkdir -p build
-          marp --output build/Bash.html --title "Bash: Mieux connaître les possibilités de la ligne de commande" Bash.md
-          wkhtmltopdf build/Bash.html build/Bash.pdf
+          marp --output Bash.html --title "Bash: Mieux connaître les possibilités de la ligne de commande" Bash.md
+          wkhtmltopdf Bash.html Bash.pdf
       - name: Upload talk slides
         uses: actions/upload-artifact@v2
         with:
           name: Bash.pdf
-          path: build/Bash.pdf
+          path: Bash.pdf
