@@ -1,0 +1,22 @@
+name: ci-build
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Install Linux Installer for Archives (liar)
+        run: sudo wget -nv https://git.framasoft.org/grumpyf0x48/liar/raw/master/liar -O /usr/local/bin/liar && sudo chmod 755 /usr/local/bin/liar
+      - name: Install Marp CLI and its dependencies
+        run: |
+          sudo apt-get --quiet update \
+            && sudo apt-get --no-install-recommends --assume-yes install wkhtmltopdf
+          mkdir -p $HOME/.local/bin \
+            && liar -l -s $HOME/.local/bin install marp https://github.com/marp-team/marp-cli/releases/download/v1.3.1/marp-cli-v1.3.1-linux.tar.gz
+      - name: Build talk slides
+        run: |
+          mkdir -p build
+          marp --output build/Bash.html --title "Bash: Mieux connaître les possibilités de la ligne de commande" Bash.md
+          wkhtmltopdf build/Bash.html build/Bash.pdf
