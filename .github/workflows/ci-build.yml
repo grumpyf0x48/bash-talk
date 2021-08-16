@@ -20,3 +20,8 @@ jobs:
           mkdir -p build
           marp --output build/Bash.html --title "Bash: Mieux connaître les possibilités de la ligne de commande" Bash.md
           wkhtmltopdf build/Bash.html build/Bash.pdf
+      - name: Upload talk slides
+        uses: actions/upload-artifact@v1
+        with:
+          name: Bash.pdf
+          path: build/Bash.pdf
