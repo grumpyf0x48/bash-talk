@@ -20,7 +20,7 @@ jobs:
           mkdir -p $HOME/.local/bin
           sudo wget -nv https://git.framasoft.org/grumpyf0x48/liar/raw/master/liar -O /usr/local/bin/liar
           sudo chmod 755 /usr/local/bin/liar
-          liar -l -s $HOME/.local/bin install marp https://github.com/marp-team/marp-cli/releases/download/v1.3.1/marp-cli-v1.3.1-linux.tar.gz
+          sudo -E liar -r -l -s /usr/local/bin install marp https://github.com/marp-team/marp-cli/releases/download/v1.3.2/marp-cli-v1.3.2-linux.tar.gz
 
       - name: Build talk slides
         run: |
