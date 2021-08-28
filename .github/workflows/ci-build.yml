@@ -23,7 +23,10 @@ jobs:
         run: |
           marp --output Bash.html --title "Bash: Mieux connaître les possibilités de la ligne de commande" Bash.md \
             && wkhtmltopdf Bash.html Bash.pdf
-
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: Upload talk slides
         uses: actions/upload-artifact@v2
         with:
