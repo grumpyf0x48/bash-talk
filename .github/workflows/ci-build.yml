@@ -28,5 +28,5 @@ jobs:
       - name: Upload talk slides
         uses: actions/upload-artifact@v2
         with:
-          name: Bash.pdf
+          name: Bash.html
           path: build/Bash.html
