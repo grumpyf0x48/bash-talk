@@ -15,8 +15,6 @@ jobs:
 
       - name: Install Marp CLI and its dependencies
         run: |
-          sudo apt-get --quiet update
-          sudo apt-get --no-install-recommends --assume-yes install wkhtmltopdf
           mkdir -p $HOME/.local/bin
           sudo wget -nv https://git.framasoft.org/grumpyf0x48/liar/raw/master/liar -O /usr/local/bin/liar
           sudo chmod 755 /usr/local/bin/liar
@@ -26,10 +24,9 @@ jobs:
         run: |
           mkdir -p build
           marp --output build/Bash.html --title "Bash: Mieux connaître les possibilités de la ligne de commande" Bash.md
-          wkhtmltopdf build/Bash.html build/Bash.pdf
 
       - name: Upload talk slides
         uses: actions/upload-artifact@v2
         with:
           name: Bash.pdf
-          path: build/Bash.pdf
+          path: build/Bash.html
