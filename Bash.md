@@ -214,10 +214,6 @@ TAB: complete
     $ command -V rm
     rm est un alias vers « zrm_rm »
 
-### Fermer la session automatiquement
-
-    $ export TMOUT=600
-
 ---
 ## Conclusion
 
