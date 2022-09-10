@@ -205,6 +205,9 @@ TAB: complete
 
 ### Obtenir des infos sur une commande
 
+    $ command -V python3
+    python3 est /usr/bin/python3
+
     $ command -V command
     command est une primitive du shell
 
