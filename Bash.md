@@ -40,7 +40,7 @@ Ces raccourcis sont définis par la librairie **readline**.
 
     $ ls $HOME
     
-Appui sur **Ctrl + Alt + e**:
+Appui sur **Ctrl + Alt + e** :
 
     $ ls --color=auto /home/user
 
@@ -55,7 +55,7 @@ A tester avec `rm`: alias ou built-in ?
 
     $ cp /Vidéos/IT/clean_coders/CleanCode-E
 
-Un appui sur **TAB** affiche les fichiers correspondants:
+Un appui sur **TAB** affiche les fichiers correspondants :
 
     $ cp /Vidéos/IT/clean_coders/CleanCode-E
     CleanCode-E1.mp4 CleanCode-E2.mp4 CleanCode-E3.mp4
@@ -67,7 +67,7 @@ On peut aussi utiliser: **Alt + /** (En pratique: **Alt + Shift + /**)
 
     $  ls
 
-Un appui sur **TAB** affiche les commandes qui commencent par `ls`:
+Un appui sur **TAB** affiche les commandes qui commencent par `ls` :
 
     $ ls
     ls lsblk lscpu lsh lslocks lsof lspgpot lsattr lsb_release lsdiff lsinitramfs lsmod lspci lsusb
@@ -79,7 +79,7 @@ Cela fonctionne aussi avec le raccourci clavier: **Alt + !**
 
     $ ping freebox-
 
-Puis **Alt + @** (**Alt + Alt Gr + @**):
+Puis **Alt + @** (**Alt + Alt Gr + @**) :
 
     $ ping freebox-
     freebox-player.local freebox-server.local
@@ -91,7 +91,7 @@ Puis **Alt + @** (**Alt + Alt Gr + @**):
 
     $ cp /Vidéos/IT/clean_coders/CleanCode-E
 
-Un appui sur **Alt + \*** complète la ligne de commande avec les fichiers qu'un appui sur **TAB** aurait affiché:
+Un appui sur **Alt + \*** complète la ligne de commande avec les fichiers qu'un appui sur **TAB** aurait affiché :
 
     $ cp /Vidéos/IT/clean_coders/CleanCode-E1.mp4 /Vidéos/IT/clean_coders/CleanCode-E2.mp4
     /Vidéos/IT/clean_coders/CleanCode-E3.mp4
@@ -99,26 +99,12 @@ Un appui sur **Alt + \*** complète la ligne de commande avec les fichiers qu'un
 Je peux maintenant continuer ma commande par exemple avec `/backup`.
 
 ---
-## Vérification de la ligne de commande
-
-Essayez:
-
-    $ rm -fr
-
-Puis **ESPACE** puis **Alt + \***
-
-    $ rm -fr
-    rm -fr .asciinema .bash_aliases .bash_functions .bash_git_prompt .bash_history .bash_logout ...
-
-:disappointed_relieved: A vous de voir si vous appuierez sur **ENTER** ensuite !
-
----
 ## Utilisation de la dernière commande
 
     $ apt-get update
     E: Impossible d'ouvrir le fichier verrou /var/lib/apt/lists/lock - open (13: Permission non accordée)
 
-On relance avec les droits `root`:
+On relance avec les droits `root` :
 
     $ sudo !!
     sudo apt-get update
@@ -131,7 +117,7 @@ La dernière commande est maintenant `sudo apt-get update`.
     $ ls Video1.mp4  Video2.mp4
     Video1.mp4  Video2.mp4
 
-On accède aux paramètres de la dernière commande avec **!\***:
+On accède aux paramètres de la dernière commande avec **!\*** :
 
     $ rm !*
     rm Video1.mp4 Video2.mp4
@@ -141,12 +127,12 @@ Et si seulement le dernier paramètre m'intéresse ?
 ---
 ## Utilisation du dernier paramètre
 
-    $ curl -L https://git.framasoft.org/grumpyf0x48/liar/raw/master/liar -o ~/bin/liar
+    $ curl -L https://github.com/rupa/z/blob/master/z.sh -o ~/.z
     $ chmod +x
 
-Un appui sur **Alt + .** change la ligne de commande en:
+Un appui sur **Alt + .** change la ligne de commande en :
 
-    $ chmod +x ~/bin/liar
+    $ chmod +x ~/.z
     
 On peut aussi utiliser:
 
@@ -155,20 +141,20 @@ On peut aussi utiliser:
 ---
 ## Utilisation de chaque paramètre
 
-On peut modifier l'exemple précédent comme suit:
+On peut modifier l'exemple précédent comme suit :
 
-    $ curl -L https://git.framasoft.org/grumpyf0x48/liar/raw/master/liar -o ~/bin/liar && chmod +x !#:4
+    $ curl -L https://github.com/rupa/z/blob/master/z.sh -o ~/.z && chmod +x !#:4
 
 Car le nom du fichier est le quatrième paramètre de la commande précédente.
 
-Dans l'historique, la syntaxe `!#:4` sera bien remplacée par `~/bin/liar`.
+Dans l'historique, la syntaxe `!#:4` sera bien remplacée par `~/.z`.
 
 Syntaxe un peu pénible **:cry:** quand même.
 
 ---
 ## Edition de la dernière commande
 
-Avec une commande complexe :angry: comme:
+Avec une commande complexe :angry: comme :
 
     $ find /usr/include/linux/ -name *.h -exec grep time_t {} \; -print
 
@@ -178,9 +164,9 @@ Vous pouvez:
 - l'enregistrer dans l'historique, en commentaire - avec **Alt + #** (En pratique: **Alt + Alt Gr + #**)
 
 ---
-## Configuration de readline
+## La librairie readline
 
-Dans le fichier `.inputrc`:
+Se configure dans le fichier `~/.inputrc` :
 
 ```
 # Never rings the bell.
@@ -188,31 +174,29 @@ set bell-style none
 
 # Performs filename matching and completion in a case-insensitive fashion.
 set completion-ignore-case on
-
-# Displays possible completions using different colors to indicate their file type.
-set colored-stats on
-
-# Default completion mode: Attempt to perform completion on the text before point.
-TAB: complete
-
-# Similar to complete, but replaces the word to be completed with a single match from the list of possible completions.
-# Repeated execution of menu-complete steps through the list of possible completions, inserting each match in turn.
-#TAB: menu-complete
+...
 ```
 
+Pour en savoir plus:
+
+    $ man readline
+
 ---
-## Dernières astuces
+## Obtenir des infos sur une commande
 
-### Obtenir des infos sur une commande
+    $ command -V python
+    python is /usr/bin/python
 
-    $ command -V python3
-    python3 est /usr/bin/python3
+    $ command -V ls
+    ls is aliased to `ls --color=auto'
+
+    $ command -V canonical_which
+    canonical_which is a function
+    canonical_which () {
+    ...
 
     $ command -V command
-    command est une primitive du shell
-
-    $ command -V rm
-    rm est un alias vers « zrm_rm »
+    command is a shell builtin
 
 ---
 ## Conclusion
