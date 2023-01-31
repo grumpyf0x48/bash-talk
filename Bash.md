@@ -60,7 +60,7 @@ Un appui sur **TAB** affiche les fichiers correspondants :
     $ cp /Vidéos/IT/clean_coders/CleanCode-E
     CleanCode-E1.mp4 CleanCode-E2.mp4 CleanCode-E3.mp4
 
-On peut aussi utiliser: **Alt + /** (En pratique: **Alt + Shift + /**)
+On peut aussi utiliser: **Alt + /** (**Alt + Shift + /**)
 
 ---
 ## Complétion ... les commandes
@@ -161,12 +161,16 @@ Avec une commande complexe :angry: comme :
 Vous pouvez:
 
 - éditer la commande avec l'éditeur par défaut de Linux avec le raccourci **Ctrl + x + e**
-- l'enregistrer dans l'historique, en commentaire - avec **Alt + #** (En pratique: **Alt + Alt Gr + #**)
+- l'enregistrer dans l'historique, en commentaire - avec **Alt + #** (**Alt + Alt Gr + #**)
 
 ---
 ## La librairie readline
 
-Se configure dans le fichier `~/.inputrc` :
+Est documentée ici :
+
+    $ man readline
+
+Et se configure dans le fichier `~/.inputrc` :
 
 ```
 # Never rings the bell.
@@ -176,10 +180,6 @@ set bell-style none
 set completion-ignore-case on
 ...
 ```
-
-Pour en savoir plus:
-
-    $ man readline
 
 ---
 ## Obtenir des infos sur une commande
