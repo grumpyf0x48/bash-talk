@@ -4,12 +4,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Display repository info
-        run: |
-          echo "🔎 The name of your branch is ${{ github.ref }}."
-          echo "🔎 The name of your repository is ${{ github.repository }}."
-          echo "🔎 The name of your current user is $(id)."
-
       - name: Check out repository code
         uses: actions/checkout@v3.3.0
 
