@@ -5,11 +5,14 @@ theme: gaia
 <!-- paginate: true -->
 <!-- footer: Bash: Mieux connaître les possibilités de la ligne de commande -->
 
-## Bash
+## Bash: Mieux connaître les possibilités de la ligne de commande
 
-Mieux connaître les possibilités de la ligne de commande.
+Pierre-Yves Fourmond
 
-Pierre-Yves Fourmond ([@grumpyf0x48](https://twitter.com/grumpyf0x48))
+Consultant Senior pour [OCTO Technology](https://www.octo.com)
+
+[@grumpyf0x48](https://twitter.com/grumpyf0x48)
+[https://www.linkedin.com/in/pyfourmond](https://www.linkedin.com/in/pyfourmond)
 
 ---
 ## Historique de Bash
