@@ -14,8 +14,7 @@ jobs:
           sudo -E liar -r -l -s /usr/local/bin install marp https://github.com/marp-team/marp-cli/releases/download/v2.3.0/marp-cli-v2.3.0-linux.tar.gz
 
       - name: Build talk slides
-        run: |
-          marp --output Bash.html --title "Bash: Mieux connaître les possibilités de la ligne de commande" Bash.md
+        run: marp --output Bash.html --title "Bash: Mieux connaître les possibilités de la ligne de commande" Bash.md
 
       - name: Upload talk slides
         uses: actions/upload-artifact@v3.1.2
