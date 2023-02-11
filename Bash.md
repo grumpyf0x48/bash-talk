@@ -25,15 +25,14 @@ Pierre-Yves Fourmond ([@grumpyf0x48](https://twitter.com/grumpyf0x48))
 ---
 ## Raccourcis claviers courants
 
+- **Ctrl + r**, **Ctrl + g**: chercher dans l'historique, arrêter la recherche
 - **Ctrl + a**, **Ctrl + e**: aller au début, à la fin de la ligne
 - **Alt + f**, **Alt + b**: avancer, reculer d'un mot
 - **Ctrl + w**, **Alt + d**: supprimer le début, la fin du mot
-- **Ctrl + u**, **Ctrl + k**: effacer tout à gauche, à droite du curseur
+- **Ctrl + u**, **Ctrl + k**: supprimer tout à gauche, à droite du curseur
+- **Ctrl + y**: copier ce qui vient d'être supprimé
 - **Ctrl + Shift + c**,  **Ctrl + Shift + v**: copier le texte, coller
-- **Ctrl + s**, **Ctrl + q**: mettre en pause la sortie du terminal, continuer
-- **Ctrl + r**: chercher dans l'historique
-
-Ces raccourcis sont définis par la librairie **readline**.
+- **Ctrl + l**: effacer l'écran
 
 ---
 ## Expansion de la ligne de commande
@@ -166,11 +165,11 @@ Vous pouvez:
 ---
 ## La librairie readline
 
-Est documentée ici :
+Elle est documentée ici :
 
     $ man readline
 
-Et se configure dans le fichier `~/.inputrc` :
+et se configure dans le fichier `~/.inputrc` :
 
 ```
 # Never rings the bell.
