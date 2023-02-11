@@ -11,7 +11,7 @@ jobs:
           echo "🔎 The name of your current user is $(id)."
 
       - name: Check out repository code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.3.0
 
       - name: Install Marp CLI and its dependencies
         run: |
