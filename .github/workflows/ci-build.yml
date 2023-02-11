@@ -24,7 +24,7 @@ jobs:
           marp --output Bash.html --title "Bash: Mieux connaître les possibilités de la ligne de commande" Bash.md
 
       - name: Upload talk slides
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: Bash.html
           path: Bash.html
