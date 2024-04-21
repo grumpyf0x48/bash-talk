@@ -1,24 +1,28 @@
 name: ci-build
-on: [push]
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v3.3.0
+        uses: actions/checkout@v4
 
       - name: Install Marp CLI and its dependencies
         run: |
           sudo wget -nv https://git.framasoft.org/grumpyf0x48/liar/raw/master/liar -O /usr/local/bin/liar
           sudo chmod 755 /usr/local/bin/liar
-          sudo -E liar -r -l -s /usr/local/bin install marp https://github.com/marp-team/marp-cli/releases/download/v2.3.0/marp-cli-v2.3.0-linux.tar.gz
+          sudo -E liar -r -l -s /usr/local/bin install marp https://github.com/marp-team/marp-cli/releases/download/v3.4.0/marp-cli-v3.4.0-linux.tar.gz
 
       - name: Build talk slides
         run: |
           marp --output Bash.html --title "Bash: Mieux connaître les possibilités de la ligne de commande" Bash.md
 
       - name: Upload talk slides
-        uses: actions/upload-artifact@v3.1.2
+        uses: actions/upload-artifact@v4
         with:
           name: Bash.html
           path: Bash.html
