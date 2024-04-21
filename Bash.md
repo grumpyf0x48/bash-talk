@@ -67,7 +67,7 @@ On peut aussi utiliser: **Alt + /** (**Alt + Shift + /**)
 ---
 ## Complétion ... les commandes
 
-    $  ls
+    $ ls
 
 Un appui sur **TAB** affiche les commandes qui commencent par `ls` :
 
